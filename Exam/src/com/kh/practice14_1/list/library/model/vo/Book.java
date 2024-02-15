@@ -31,12 +31,13 @@ public class Book {
 	}
 
 	public boolean equals(Book book) {
-		
-		return ;
+		//TODO
+		return true;
 	}
 
 	public int compareTo() {
-		return;
+		//TODO
+		return 0;
 	}
 
 	public String getTitle() {

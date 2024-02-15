@@ -20,17 +20,20 @@ public class BookController {
 	
 	public ArrayList<Book> serchBook(String keyword){
 		int x = list.indexOf(keyword);
-		do {System.out.println();
-		return ;
+//		do {System.out.println();
+		//TODO
+		return  null;
 	}
 	
 	public Book deleteBook(String title, String author) {
-		
-		
+		Book result = null;
+		// TODO
+		return result;
 	}
 	
 	public int ascBook() {
-		return ;
+		// TODO
+		return 0;
 	}
 
 }
