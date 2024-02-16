@@ -11,6 +11,7 @@ import com.kh_practice4.func.ControlPractice6;
 import com.kh_practice4.func.ControlPractice7;
 import com.kh_practice4.func.ControlPractice8;
 import com.kh_practice4.func.ControlPractice9;
+import com.kh_practice4.func.ControlPractice11;
 
 public class ControlPractice10 {
 
@@ -29,6 +30,7 @@ public class ControlPractice10 {
 			System.out.println("7. BMI");
 			System.out.println("8. 계산기");
 			System.out.println("9. P/F");
+			System.out.println("10. PW");
 			System.out.print("선택 : ");
 			num = sc.nextInt();
 
@@ -77,6 +79,11 @@ public class ControlPractice10 {
 				System.out.println("실습문제 4-9");
 				ControlPractice9 c9 = new ControlPractice9();
 				c9.method9();
+				break;
+			case 10:
+				System.out.println("실습문제 4-10(hard)");
+				ControlPractice11 c10 = new ControlPractice11();
+				c10.method11();
 				break;
 			default:
 				System.out.println("잘못된 번호입니다.");
