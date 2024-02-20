@@ -38,6 +38,8 @@ public class PersonMenu {
 	}
 
 	public void studentMenu() {
+		
+		
 		while (true) {
 			System.out.println("1. 학생 추가");
 			System.out.println("2. 학생 보기");
@@ -60,8 +62,9 @@ public class PersonMenu {
 				break;
 			default:
 				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
+				}
 			}
-		}
+		
 		
 	}
 
@@ -94,7 +97,9 @@ public class PersonMenu {
 	}
 
 	public void insertStudent() {
-		
+		while(true) {
+		if(PersonController.getsCount() < 3) {
+			
 		System.out.print("학생 이름 : ");
 		String name = sc.next();
 		sc.nextLine();
@@ -126,7 +131,22 @@ public class PersonMenu {
 		System.out.println();
 
 		pc.insertStudent(name, age, height, weight, grade, major);
-
+		
+		
+		} else {
+			System.out.println("학생을 담을 수 있는 공간이 꽉 찼습니다.");
+			System.out.println("학생 추가를 종료하고 학생 메뉴로 돌아갑니다.");
+			return;
+			}
+			System.out.print("그만하시려면 N(또는 n), 이어서 하시려면 아무키나 누르세요 : ");
+			String keep = sc.next();
+			sc.nextLine();
+			System.out.println();
+			
+			if(keep.equals("n") || keep.equals("N")) {
+				break;
+			}
+		}
 	}
 
 	public void printStudent() {
@@ -134,11 +154,13 @@ public class PersonMenu {
 			if(e != null)
 				System.out.println(e);
 		}
-//		System.out.println(pc.printStudent());
+		pc.toString(); //TODO
 	}
 
 	public void insertEmployee() {
-		
+		while(true) {
+		if(PersonController.geteCount() < 10) {
+			
 		System.out.print("사원 이름 : ");
 		String name = sc.next();
 		sc.nextLine();
@@ -170,7 +192,21 @@ public class PersonMenu {
 		System.out.println();
 
 		pc.insertEmployee(name, age, height, weight, salary, dept);
-	}
+			} else {
+				System.out.println("사원을 담을 수 있는 공간이 꽉 찼습니다.");
+				System.out.println("사원 추가를 종료하고 사원 메뉴로 돌아갑니다.");
+				return;
+			}
+			System.out.print("그만하시려면 N(또는 n), 이어서 하시려면 아무키나 누르세요 : ");
+			String keep = sc.next();
+			sc.nextLine();
+			System.out.println();
+		
+			if(keep.equals("n") || keep.equals("N")) {
+				break;
+				}
+			}
+		}
 
 	public void printEmployee() {
 		for(Employee e : pc.printEmployee()) {

@@ -1,5 +1,7 @@
 package com.kh_practice9_2.person.controller;
 
+import java.util.Arrays;
+
 import com.kh_practice9_2.person.model.vo.Employee;
 import com.kh_practice9_2.person.model.vo.Student;
 
@@ -34,10 +36,6 @@ public class PersonController {
 	}
 
 	public void insertStudent(String name, int age, double height, double weight, int grade, String major) {
-		if (sCount == 3) {
-			System.out.println("학생을 담을 수 있는 공간이 꽉 찼습니다.");
-			System.out.println("학생 추가를 종료하고 학생 메뉴로 돌아갑니다.");
-		} else {
 		for(int i=0;i<s.length; i++) {
 			if(s[i] == null) {
 				s[i] = new Student();
@@ -50,22 +48,15 @@ public class PersonController {
 				sCount++;
 				break;
 				}
-			}
+			
 		}
 	}
 
 	public Student[] printStudent() {
-//		for(int i = 0; i<s.length; i++) {
-//			System.out.println(s[i].getName() + ", " + s[i].getAge() + ", " + s[i].getHeight() + ", " + s[i].getWeight() + ", " + s[i].getGrade() + ", " + s[i].getMajor());
-//		}
 		return s;
 	}
 
 	public void insertEmployee(String name, int age, double height, double weight, int salary, String dept) {
-		if (eCount == 10) {
-			System.out.println("사원을 담을 수 있는 공간이 꽉 찼습니다.");
-			System.out.println("사원 추가를 종료하고 사원 메뉴로 돌아갑니다.");
-		} 
 		for(int i=0;i<e.length; i++) {
 			if(e[i] == null) {
 				e[i].setName(name);
@@ -81,8 +72,21 @@ public class PersonController {
 		
 	}
 
-	public Employee[] printEmployee() {
-		return null;
+	@Override
+	public String toString() {
+		return "PersonController [s=" + Arrays.toString(s) + "]";
 	}
 
+	public Employee[] printEmployee() {
+		return e;
+	}
+
+	public static int getsCount() {
+		return sCount;
+	}
+
+	public static int geteCount() {
+		return eCount;
+	}
+	
 }
