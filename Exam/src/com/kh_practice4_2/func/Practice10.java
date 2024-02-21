@@ -20,6 +20,7 @@ public class Practice10 {
 			}
 		else break;
 		}
+		sc.close();
 		if (dan < 2 || dan > 9) {
 			System.out.println("2 이상, 9 이하의 수를 입력해주세요.");
 		} else {
@@ -30,5 +31,9 @@ public class Practice10 {
 				}
 			}
 		}
+	}
+	
+	public static void main(String[] args) {
+		new Practice10().practice10();
 	}
 }
