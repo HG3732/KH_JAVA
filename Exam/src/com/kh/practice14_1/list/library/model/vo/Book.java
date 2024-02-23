@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Book {
+public class Book implements Comparable<Book> {
 
 	private String title;
 	private String author;
@@ -31,13 +31,13 @@ public class Book {
 	}
 
 	public boolean equals(Book book) {
-		//TODO
+		// TODO
 		return true;
 	}
 
-	public int compareTo() {
-		//TODO
-		return 0;
+	@Override
+	public int compareTo(Book book) {
+		return this.title.compareTo(book.title);
 	}
 
 	public String getTitle() {
