@@ -7,6 +7,9 @@ keyfiles/
 # Compiled class file
 *.class
 
+# Eclipse
+build/
+
 # Log file
 *.log
 
