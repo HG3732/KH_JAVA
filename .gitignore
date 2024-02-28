@@ -1,3 +1,9 @@
+#Eclipse
+build/
+bin/
+keyfiles/
+*.properties
+
 # Compiled class file
 *.class
 
