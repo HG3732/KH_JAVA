@@ -1,6 +1,6 @@
 package programmers;
 
-public class ParkWalk {
+public class Lv1_ParkWalk {
 
 	public int[] solution(String[] park, String[] routes) {
         int[] answer = {0, 0};
@@ -29,53 +29,53 @@ public class ParkWalk {
 xx:			
 			switch (rsplit[2*i]) {
 			case "E":
-				if(answer[1]+Integer.parseInt(rsplit[2*i+1]) > W) {
-					break;
+				if(answer[1]+Integer.parseInt(rsplit[2*i+1]) > W-1) {	//공원을 벗어난다면?
+					continue;
 					} else {
-						for(int j = 0; j<Integer.parseInt(rsplit[2*i+1]); j++) {
+						for(int j = 0; j<=Integer.parseInt(rsplit[2*i+1]); j++) {	//한 칸씩 X체크
 							if(park[answer[0]].charAt(answer[1]+j) == 'X') {
 								break xx;
 							} 
 						}
+						answer[1] += Integer.parseInt(rsplit[2*i+1]);
+						break;
 					}
-				answer[1] += Integer.parseInt(rsplit[2*i+1]);
-				break;
 			case "W":
 				if(answer[1]-Integer.parseInt(rsplit[2*i+1]) < 0) {
-					break;
+					continue;
 					} else {
-						for(int j = 0; j<Integer.parseInt(rsplit[2*i+1]); j++) {
+						for(int j = 0; j<=Integer.parseInt(rsplit[2*i+1]); j++) {
 							if(park[answer[0]].charAt(answer[1]-j) == 'X') {
 								break xx;
 							} 
 						}
+						answer[1] -= Integer.parseInt(rsplit[2*i+1]);
+						break;
 					}
-				answer[1] -= Integer.parseInt(rsplit[2*i+1]);
-				break;
 			case "S":
-				if(answer[0]+Integer.parseInt(rsplit[2*i+1]) > H) {
-					break;
+				if(answer[0]+Integer.parseInt(rsplit[2*i+1]) > H-1) {
+					continue;
 					} else {
-						for(int j = 0; j<Integer.parseInt(rsplit[2*i+1]); j++) {
+						for(int j = 0; j<=Integer.parseInt(rsplit[2*i+1]); j++) {
 							if(park[answer[0]+j].charAt(answer[1]) == 'X') {
 								break xx;
 							} 
 						}
+						answer[0] += Integer.parseInt(rsplit[2*i+1]);
+						break;
 					}
-				answer[0] += Integer.parseInt(rsplit[2*i+1]);
-				break;
 			case "N":
 				if(answer[0]-Integer.parseInt(rsplit[2*i+1]) < 0) {
-					break;
+					continue;
 					} else {
-						for(int j = 0; j<Integer.parseInt(rsplit[2*i+1]); j++) {
+						for(int j = 0; j<=Integer.parseInt(rsplit[2*i+1]); j++) {
 							if(park[answer[0]-j].charAt(answer[1]) == 'X') {
 								break xx;
 							} 
 						}
+						answer[0] -= Integer.parseInt(rsplit[2*i+1]);
+						break;
 					}
-				answer[0] -= Integer.parseInt(rsplit[2*i+1]);
-				break;
 			default:
 				break;
 			}
