@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Lv1_BurgerMaking {
-    public int solution(int[] ingredient) {
+	public int solution(int[] ingredient) {
         int answer = 0;
         int[] burger = {1, 2, 3, 1};
         
@@ -20,7 +20,7 @@ public class Lv1_BurgerMaking {
 				 ing.remove(i);
 				 answer++;
 				 if(i>3) {i-=3;}
-				 else {i=0;}
+				 else {i=-1;}
 			 }
 		}
         return answer;
