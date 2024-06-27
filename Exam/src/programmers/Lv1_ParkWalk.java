@@ -1,4 +1,4 @@
-package programmers;
+package lv1;
 
 public class Lv1_ParkWalk {
 

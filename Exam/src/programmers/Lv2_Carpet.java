@@ -1,4 +1,4 @@
-package programmers;
+package lv1;
 
 public class Lv2_Carpet {
 	 public int[] solution(int brown, int yellow) {

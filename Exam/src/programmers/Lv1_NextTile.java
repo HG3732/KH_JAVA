@@ -1,4 +1,4 @@
-package programmers;
+package lv1;
 
 public class Lv1_NextTile {
 	public int solution(String[][] board, int h, int w) {

@@ -1,9 +1,9 @@
-package programmers;
+package lv1;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Lv_1Wallpaper2 {
+public class Lv1_Wallpaper2 {
 	
 	public int[] solution(String[] wallpaper) {
         int[] answer = new int[4];
